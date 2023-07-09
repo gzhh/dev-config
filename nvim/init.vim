@@ -30,7 +30,8 @@ set mouse= "use mouse select text copy to clipboard
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
-call plug#begin('~/.vim/plugged')
+" be stored in ~/.local/share/nvim/
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " tabline and statusline
